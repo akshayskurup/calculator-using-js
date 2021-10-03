@@ -1,21 +1,86 @@
+body{
+    background: #091921;
+    
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e91e63,#ffc107);
+    clip-path: circle(22% at 30% 20%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffff,#da00ff);
+    clip-path: circle(20% at 70% 90%);
+}
 .main-body{
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
     width: 350px;
     height: 500px;
-    margin-left: 460px;
-    background: grey;
+    margin-left: 525px;
+    background: rgba(225, 225, 225, 0.05);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(225, 225, 225, 0.02);
+    border-left: 1px solid rgba(225, 225, 225, 0.02);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    
+    
+}
+.main-body .button{
+    position: relative;
+    display: grid;
+    
 }
 #screen{
     width: 342px;
     margin-top: 30px;
     height: 50px;
     pointer-events: none;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px;
+}   
+
+.main-body .btn{
+    font-weight: 400px;
 }
+
 .btn{
-    width: 78px;
-    height: 60px;
-    margin-left: 5px;
-    margin-top: 12px;
-    background: burlywood;
+    grid-column: span 4;
+    place-items: center;
+    width: 82px;
+    height: 72px;
+    font-weight: 400;
+    font-size: 20px;
+    user-select: none;
+    background: transparent;
+    border: transparent;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+.btn:active{
+    background: #14ff47;
+    color: #192f00;
 }
 .button{
     margin-top: 35px;
